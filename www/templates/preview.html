@@ -1,0 +1,31 @@
+<ion-view view-title="Preview">
+  <!-- Nav Bar -->
+  <ion-nav-bar class="bar-positive">
+    <ion-nav-back-button>
+  </ion-nav-back-button>
+  </ion-nav-bar>
+
+
+
+  <ion-content ng-init="getPreview()">
+
+
+  <div class="card">
+    <div class="item item-divider">
+        <img style="width: 32px; border-radius: 2em;" src="{{article.gravatarURL}}">
+      <h2>{{article.title}}</h2>
+      <p>{{article.time}}</p>
+    </div>
+
+    <div class="item item-text-wrap">
+      <img src="{{article.imageUrl}}" style="width:100%">
+      <p>{{article.summary}}</p>
+    </div>
+  </div>
+
+      <button class="button button-block button-warning" ng-click="publishArticle()">
+        Post For Real
+      </button>
+
+  </ion-content>
+</ion-view>
