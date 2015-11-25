@@ -47,7 +47,10 @@ h1, h2, h3, h4, h5, h6, body {
 //  ================================================================
 
 .login {
-  background-image: linear-gradient(45deg, #4BCEB1 0%, #62EA70 100%);
+  // background-image: linear-gradient(45deg, #4BCEB1 0%, #62EA70 100%);
+  /* Rectangle 120: */
+  background-image: linear-gradient(-180deg, #404042 0%, #FFFFFF 0%, #F7F7F7 32%, #F3F3F3 86%, #D9D9D9 100%);
+
 
   input[type="text"], input[type="password"] {
     color: #fff;
