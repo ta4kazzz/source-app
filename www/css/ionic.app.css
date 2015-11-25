@@ -9093,18 +9093,26 @@ h1, h2, h3, h4, h5, h6, body {
   padding-top: 0; }
 
 .login {
-  background-image: linear-gradient(45deg, #4BCEB1 0%, #62EA70 100%); }
+  background-image: linear-gradient(-180deg, #404042 0%, #FFFFFF 0%, #F7F7F7 32%, #F3F3F3 86%, #BFBFBF 100%); }
+  .login .item.item-input {
+    border-radius: 2em; }
   .login input[type="text"], .login input[type="password"] {
-    color: #fff; }
+    color: #4B4B4B;
+    padding-left: 10px; }
+    .login input[type="text"]:focus, .login input[type="password"]:focus {
+      border-color: #60DA6B !important; }
   .login .headline {
     text-align: center;
-    color: #fff !important;
+    color: #4B4B4B !important;
     letter-spacing: 10px;
     margin: 1em 1em; }
+  .login .list-inset {
+    background-color: transparent; }
   .login .button-outline.button-outline {
     border-color: #FFFFFF;
-    background: transparent;
-    color: #FFFFFF;
+    background-image: linear-gradient(45deg, #4BCEB1 0%, #62EA70 100%);
+    color: #4B4B4B;
+    color: #fff;
     text-transform: uppercase;
     letter-spacing: 4px;
     border-radius: 2em;
@@ -9229,20 +9237,27 @@ h1, h2, h3, h4, h5, h6, body {
 .full-image {
   width: 100%; }
 
+@media (min--moz-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .tabs {
+    padding-top: 0px !important;
+    border-top: 1px solid #D8D8D8 !important; } }
+
 .tab-item .icon {
   margin: 6px auto; }
 
 .add-button {
-  background-color: #000; }
+  background-color: #fff;
+  border-top: #f2f2f2 solid; }
 
 .active-tab {
-  background-color: #303030; }
+  background-color: #EFEFEF;
+  color: #64E387 !important; }
 
 .tab-item .icon {
   margin: 0px auto;
   padding: 7px 0;
   height: 100%;
-  color: #57D263; }
+  color: #4B4B4B; }
 
 .tabs-top > .tabs {
   left: 0px; }
