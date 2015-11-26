@@ -22,7 +22,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 @import "www/lib/ionic/scss/ionic";
 
 // Colors
-
+$white:  #ffffff;
 $source-gray:   #4B4B4B;
   // background-image: linear-gradient(45deg, #4BCEB1 0%, #62EA70 100%);
 
@@ -210,13 +210,19 @@ background-image: linear-gradient(45deg, #4BCEB1 0%, #62EA70 100%);
 
 
 .profile--banner {
-  background-color: #4B4B4B;
-  color: #fff;
+  background-color: $white;
+  color: $source-gray;
+  .profile-picture {
+    img {
+      width: 4em;
+      border-radius: 5em;
+      max-width: 70px;
+    }
+  }
   .username {
     font-size: 1.5em;
-    color: #FFFFFF;
+    color: $source-gray;
     line-height: 39px;
-    margin: 10px 0;
     font-weight: 700;
   }
   .description {
@@ -229,18 +235,17 @@ background-image: linear-gradient(45deg, #4BCEB1 0%, #62EA70 100%);
     text-align: center;
     .profile--number {
       text-decoration: none;
-      color: #fff;
-      /* List Items 2: */
+      color: $source-gray;
       font-family: RobotoCondensed-Light;
       font-size: 30px;
-      color: #5FDE94;
+      color: #source-gray;
       line-height: 39px;
     }
     .profile-label {
       opacity: 0.54;
       font-family: 'Source Sans Pro', sans-serif !important;
       font-size: 12px;
-      color: #FFFFFF;
+      color: $source-gray;
       letter-spacing: 1.35px;
       line-height: 20px;
       text-transform: uppercase;

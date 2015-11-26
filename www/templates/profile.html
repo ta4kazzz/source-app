@@ -9,11 +9,21 @@
     </ion-nav-bar>
     <ion-content>
         <div class="profile--banner">
-            <div class="profile-picture" style="margin-left: auto;margin-right: auto;max-width: 100px;text-align: center;">
-                <img style="width: 5em; border-radius: 5em; margin-top: 2em;" src="{{gravatarURL}}">
+
+            <div class="row">
+              <div class="col col-25">
+                <div class="profile-picture" >
+                    <img src="{{gravatarURL}}">
+                </div>
+              </div>
+              <div class="col col-75">
+                <div class="username">{{username}}</div>
+                <p class="description">{{description}}</p>
+              </div>
             </div>
-            <div class="username" style="text-align: center;">{{username}}</div>
-            <p class="description" style="text-align: center;">{{description}}</p>
+
+
+
             <div class="row">
                 <div class="col profile-column">
                     <a>
