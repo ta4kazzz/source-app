@@ -1,58 +1,96 @@
+
+
+
+
+
 <ion-view view-title="Profile">
-    <!-- Nav Bar -->
-    <ion-nav-bar class="bar top-shadow">
-        <ion-nav-buttons side="right">
-            <div class="buttons">
-                <i ui-sref="tabs.settings" class="icon ion-ios-cog-outline menu-icon-right"></i>
+
+
+
+  <ion-nav-bar class="bar">
+
+      <ion-nav-buttons side="right">
+          <div class="buttons">
+              <i ui-sref="tabs.settings" class="icon ion-ios-cog-outline menu-icon-right"></i>
+          </div>
+      </ion-nav-buttons>
+
+
+
+      <div class="profile--banner" style="background-color: #fff;">
+          <div class="row">
+            <div class="col col-25">
+              <div class="profile-picture" >
+                  <img src="{{gravatarURL}}">
+              </div>
             </div>
-        </ion-nav-buttons>
-    </ion-nav-bar>
+            <div class="col col-75">
+              <div class="username">{{username}}</div>
+              <p class="description">{{description}}</p>
+            </div>
+          </div>
+          <div class="row">
+              <div class="col profile-column">
+                  <a>
+                      <p class="profile--number">{{profileArticleNumber}}</p>
+                      <p class="profile-label">Articles</p>
+                  </a>
+              </div>
+              <div class="col profile-column">
+                  <a href="#/tab/profile/boards">
+                      <p class="profile--number">{{profileBoardNumber}}</p>
+                      <p class="profile-label">Boards</p>
+                  </a>
+              </div>
+              <div class="col profile-column">
+                  <a href="#/tab/profile/followers">
+                      <p class="profile--number">{{profileFollowerNumber}}</p>
+                      <p class="profile-label">Followers<p>
+                  </a>
+              </div>
+              <div class="col profile-column">
+                  <a href="#/tab/profile/following">
+                      <p class="profile--number">{{profileFollowingNumber}}</p>
+                      <p class="profile-label">Following</p>
+                  </a>
+              </div>
+          </div>
+      </div>
+
+
+      <div class="tabs-striped tabs-top tabs-background">
+          <div class="tabs top-shadow" style="top: 220px;">
+              <a class="tab-item active" ng-class="{ active: isSet(1) }" ng-click="setTab(1)">
+                  Recent
+              </a>
+              <a class="tab-item" ng-class="{ active: isSet(2) }" ng-click="setTab(2)">
+                  Boards
+              </a>
+              <a class="tab-item" ng-class="{ active: isSet(3) }" ng-click="setTab(3)">
+                  Saved
+              </a>
+              <a class="tab-item" ng-class="{ active: isSet(3) }" ng-click="setTab(3)">
+                  Sources
+              </a>
+          </div>
+      </div>
+
+  </ion-nav-bar>
+
+
+
+
+
+
+
+
+
+
+
+
     <ion-content>
-        <div class="profile--banner">
-
-            <div class="row">
-              <div class="col col-25">
-                <div class="profile-picture" >
-                    <img src="{{gravatarURL}}">
-                </div>
-              </div>
-              <div class="col col-75">
-                <div class="username">{{username}}</div>
-                <p class="description">{{description}}</p>
-              </div>
-            </div>
-
-
-
-            <div class="row">
-                <div class="col profile-column">
-                    <a>
-                        <p class="profile--number">{{profileArticleNumber}}</p>
-                        <p class="profile-label">Articles</p>
-                    </a>
-                </div>
-                <div class="col profile-column">
-                    <a href="#/tab/profile/boards">
-                        <p class="profile--number">{{profileBoardNumber}}</p>
-                        <p class="profile-label">Boards</p>
-                    </a>
-                </div>
-                <div class="col profile-column">
-                    <a href="#/tab/profile/followers">
-                        <p class="profile--number">{{profileFollowerNumber}}</p>
-                        <p class="profile-label">Followers<p>
-                    </a>
-                </div>
-                <div class="col profile-column">
-                    <a href="#/tab/profile/following">
-                        <p class="profile--number">{{profileFollowingNumber}}</p>
-                        <p class="profile-label">Following</p>
-                    </a>
-                </div>
-            </div>
-        </div>
         <!-- Profile Feed -->
-        <ion-list ng-init="getProfileFeed()">
+        <ion-list ng-init="getProfileFeed()" style="position: absolute; top: 220px;">
             <div ng-repeat="article in articles">
                 <a ui-sref="tabs.readerProfile( { articleID: article._id} )" class="item item-thumbnail-left">
                     <img src="{{article.imageUrl}}">
@@ -63,4 +101,6 @@
             </div>
         </ion-list>
     </ion-content>
+
+
 </ion-view>

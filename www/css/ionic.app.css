@@ -9176,7 +9176,12 @@ h1, h2, h3, h4, h5, h6, body {
 
 .profile--banner {
   background-color: #ffffff;
-  color: #4B4B4B; }
+  z-index: 6;
+  position: absolute;
+  color: #4B4B4B;
+  top: 44px;
+  width: 100%;
+  left: -2px; }
   .profile--banner .profile-picture img {
     width: 4em;
     border-radius: 5em;
@@ -9373,3 +9378,6 @@ h1, h2, h3, h4, h5, h6, body {
   color: #4A4A4A;
   line-height: 30px;
   font-family: 'Source Sans Pro', sans-serif !important; }
+
+.mynavbar {
+  height: 200px !important; }
