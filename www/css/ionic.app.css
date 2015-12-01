@@ -9182,10 +9182,12 @@ h1, h2, h3, h4, h5, h6, body {
   top: 44px;
   width: 100%;
   left: -2px; }
-  .profile--banner .profile-picture img {
-    width: 4em;
-    border-radius: 5em;
-    max-width: 70px; }
+  .profile--banner .profile-picture {
+    text-align: center; }
+    .profile--banner .profile-picture img {
+      width: 4em;
+      border-radius: 5em;
+      max-width: 70px; }
   .profile--banner .username {
     font-size: 1.5em;
     color: #4B4B4B;
@@ -9244,6 +9246,9 @@ h1, h2, h3, h4, h5, h6, body {
 .full-image {
   width: 100%; }
 
+.profile-tabs .tab-item {
+  border: 1px solid #D5D5D5; }
+
 @media (min--moz-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .tabs {
     padding-top: 0px !important;
@@ -9271,7 +9276,7 @@ h1, h2, h3, h4, h5, h6, body {
 
 .tabs-top.tabs-striped .tab-item.active {
   margin-top: 1px;
-  border-width: 0px 0px 4px 0px !important;
+  border-width: 0px 0px 5px 0px !important;
   border-style: solid;
   border-color: #64E387; }
 
