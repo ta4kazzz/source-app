@@ -69,7 +69,7 @@
               <a class="tab-item" ng-class="{ active: isSet(3) }" ng-click="setTab(3)">
                   Saved
               </a>
-              <a class="tab-item" ng-class="{ active: isSet(3) }" ng-click="setTab(3)">
+              <a class="tab-item" ng-class="{ active: isSet(4) }" ng-click="setTab(4)">
                   Sources
               </a>
           </div>
@@ -90,16 +90,18 @@
 
     <ion-content>
         <!-- Profile Feed -->
-        <ion-list ng-init="getProfileFeed()" style="position: absolute; top: 221px;">
-            <div ng-repeat="article in articles">
-                <a ui-sref="tabs.readerProfile( { articleID: article._id} )" class="item item-thumbnail-left">
-                    <img src="{{article.imageUrl}}">
-                    <div><h2 class="no-text-wrap">{{ article.title }}</h2></div>
-                    <p>{{ article.shortUrl }}</p>
-                    <div class="right">{{article._boardID.name}}</div>
-                </a>
-            </div>
-        </ion-list>
+        <div ng-show="isSet(1)">
+          <ion-list ng-init="getProfileFeed()" style="position: absolute; top: 221px;">
+              <div ng-repeat="article in articles">
+                  <a ui-sref="tabs.readerProfile( { articleID: article._id} )" class="item item-thumbnail-left">
+                      <img src="{{article.imageUrl}}">
+                      <div><h2 class="no-text-wrap">{{ article.title }}</h2></div>
+                      <p>{{ article.shortUrl }}</p>
+                      <div class="right">{{article._boardID.name}}</div>
+                  </a>
+              </div>
+          </ion-list>
+        </div>
     </ion-content>
 
 
