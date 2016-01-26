@@ -1,23 +1,27 @@
 //for dev
-// var base = "http://192.168.2.10:8080";
-var base = "http://localhost:8080";
+//var base = "http://192.168.2.10:8080";
+//var base = "http://localhost:8080";
 //for production
 var base = "https://pacific-woodland-8245.herokuapp.com";
 
 angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'angular-storage'])
     .constant("base", base)
     .run(function ($ionicPlatform, $rootScope, $state) {
-        $ionicPlatform.ready(function () {
-            // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
-            // for form inputs)
-            if (window.cordova && window.cordova.plugins.Keyboard) {
-                cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-            }
-            if (window.StatusBar) {
-                // org.apache.cordova.statusbar required
-                StatusBar.styleDefault();
-            }
-        });
+      $ionicPlatform.ready(function () {
+        try {
+          // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+          // for form inputs)
+          if (window.cordova && window.cordova.plugins.Keyboard) {
+            cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+          }
+          if (window.StatusBar) {
+            // org.apache.cordova.statusbar required
+            StatusBar.styleDefault();
+          }
+        } catch (e) {
+          console.log(e);
+        }
+      });
         $rootScope.goToRoute = function (routeName) {
             $state.go(routeName);
         };
@@ -348,7 +352,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
 
                     return $q.reject(response);
                 }
-
             };
         });
 

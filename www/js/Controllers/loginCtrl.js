@@ -141,7 +141,7 @@ angular.module('starter.controllers')
                }
            }).error(function (error, status, headers, config) {
                console.log(error);
-               alert('Error creating fb for user');
+               alert('Error creating twitter for user');
            });
 
             console.log('Successful login!');

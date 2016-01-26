@@ -24,7 +24,9 @@
       "id": "phonegap-facebook-plugin",
       "locator": "../phonegap-facebook-plugin"
     },
-    "twitter-connect-plugin"
+    "twitter-connect-plugin",
+    "cordova-plugin-whitelist",
+    "phonegap-facebook-plugin"
   ],
   "cordovaPlatforms": [
     "ios",
